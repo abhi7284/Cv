@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color black;
+  color: #22A39F;
+}
+
+/*
+font-family: 'Cormorant Garamond',regular ;
+font-family: 'Cinzel', ; paragraph
+font-family: 'Sacramento', ;
+font-family: 'Cormorant Garamond', ;heding
+font-family: 'Montserrat', ; */
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+.section {
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.top {
+  display: flex;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements. */
+  z-index: -1;
+}
+
+.static {
+  background-color: #F3EFE0;
+}
+
+.bg1::after {
+  background-image: url("https://wallpapercave.com/wp/wp4461419.jpg");
+}
+
+.bg2::after {
+  background-image: url("https://i.ibb.co/jJ8LFvn/bg.jpg");
+}
+
+.navbar {
+  background: #22A38F;
+}
+
+
+.profile-pic {
+  text-align: center;
+  justify-content: center;
+}
+
+
+.profile, .experience-inner, .contacts, .projects {
+  margin: 0 15%;
+  padding: 5%;
+}
+
+.abilities {
+  margin: 0 15%;
+  padding: 8%;
+}
+
+.sub-heading {
+  font-size: 2em;
+}
+
+.edu-contents {
+  margin: 10px 0;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+li .ability-title {
+  display: inline-block;
+  width: 60%;
+}
+
+li .ability-score {
+  float: right;
+}
+
+.icon {
+  margin: 5% 10%;
+}
+
+
+.big-heading {
+  text-align: center;
+  margin-top: -10px;
+  font-size: 54px;
+  font-weight: 200;
+}
+
+.main-heading {
+  font-family: 'Sacramento', regular;
+  font-size: 5em;
+}
+
+.sub-main {
+  font-size: 2em;
+  margin-top: -5px;
+}
+
+p {
+  font-family: 'Montserrat', regular;
+  text-align: center;
+
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Cormorant Garamond', regular;
+  margin: 5px;
+    text-align: center;
+}
+
+.abilities h4 {
+  margin-bottom: 20px;
+}
+
+.items .ability-score:hover{
+  transform: scale(1.05);
+  transition:
+    filter 100ms linear,
+    transform 100ms linear;
+
+}
+
+.card1 {
+  margin-top: 10%;
+  text-align: center;
+  align-items: center;
+
+}
+.card1 img{
+    border-radius: 15px
+}
+
+.card1:hover img {
+  transform: scale(1.10) translateZ(0);
+  transition:
+    filter 200ms linear,
+    transform 200ms linear;
+ filter: blur(2px);
+}
+
+#cp {
+  color: grey;
+}
+
+#cont {
+  background-color: #3E3E3E;
+}
+
+.icons {
+  text-align: center;
+}
+
+.icon {
+  text-align: center;
+  margin: 10% 10px;
+  color: #22A39F;
+}
+.icon:hover{
+  color: grey;
+}
+
+@media(min-width: 768px){
+  .static {
+
+  }
+
+
+  }
